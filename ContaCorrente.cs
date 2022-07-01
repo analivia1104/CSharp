@@ -10,5 +10,14 @@ public class ContaCorrente
         this.Agencia = Agencia;
         this.Numero = Numero;
         this.Saldo = Saldo; 
+        //this é a representação de um objeto: não é de alguém especifico.
     } 
+    public bool Sacar( double valorSaque )
+    { 
+        if(this.Saldo >= valorSaque){
+            this.Saldo = Saldo - valorSaque ;
+            return true;
+        }
+            return false;
+    }
 }
